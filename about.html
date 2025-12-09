@@ -4,12 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Special Cakes for All Occasions – About</title>
-</head>
+    <style>
+        .nav-link {
+            text-align: right;
+            color: #0c243C;
+            display: block;
+        }
+    </style>
+<h1 style="text-align: center; color: #E94D40 ">About Special Cakes for All Occasions</h1>
 <body>
 <a href="index.html"><img src="./Images/logo.png" border="0" alt="Special Cakes for All Occasions logo"></a>
-    <a href="index.html" style="text-align: right; color:#0c243C; display: block;">Home</a> 
-    <a href="Cakes-for-sale.html" style="text-align: right; color:#0c243C; display: block;">Cakes for sale</a>
-    <a href="About.html" style="text-align: right; color:#0c243C; display: block;">About</a>
+<h2 style="text-align: center; color:#E94D40">Job opportunities!</h2>
+    <a href="Cakes for sale.html" class="nav-link">Cakes for sale</a>
+    <a href="About.html" class="nav-link">About</a>
    <img src="./Images/CakeDisplay1200.png" alt="Cake Banner" style="display: block; margin: 0 auto;">
 <p style="text-align: center; color: #E94D40 ">About Special Cakes for All Occasions</p>
 <p style="text-align: center; color:#0c243C">Special Cakes for All Occasions started a year ago by the store owner, Sam Rice, who wanted to share their love of baking with the world. Come and taste all the delightful cakes!</p>
@@ -35,14 +42,14 @@
             <td style="border: 1px solid #0C243C; padding: 10px;">Serves customers in the shop and operates the cash register.</td>
             <td style="border: 1px solid #0C243C; padding: 10px;">$25,000 p.a</td>
         </tr>
-    
-    </tbody>
-</table>
-<div style="text-align: center;">
-    <h2 style="color:#E94D40;">Get in touch with us</h2>
-    <!-- The form action is a placeholder and should be updated when backend is implemented -->
-    <form action="#" method="post" style="display: inline-block; text-align: left;">
-        <label for="Name">Name:</label><br>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" value="" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" value="" required><br><br>
+        <label for="phone">Phone:</label><br>
+        <input type="tel" id="Phone" name="Phone" value="" required pattern="^\+?[0-9\s\-\(\)]{7,20}$"><br><br>  
+        <label for="feedback">Feedback:</label><br>
+        <textarea id="feedback" name="feedback" rows="4" cols="40" required></textarea><br><br>
         <input type="text" id="Name" name="Name" value="" required><br>
         <label for="Email">Email:</label><br>
         <input type="email" id="Email" name="Email" value="" required><br><br>
