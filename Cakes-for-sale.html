@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cakes for sale</title>
     <style>
+        /* Move presentation out of the HTML attributes to fix validator warnings */
+        img { border: 0; } /* removes obsolete border attribute usage */
         .cake-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -15,7 +17,7 @@
     </style>
 </head>
 <body>
-    <a href="index.html"><img src="./Images/logo.png" alt="Company Logo" style="border: 0;"></a>
+    <a href="index.html" class="logo"><img src="./Images/logo.png" alt="Company logo"></a>
     <a href="index.html" style="text-align: right; color:#0c243C; display: block;">Home</a> 
     <a href="cakes-for-sale.html" style="text-align: right; color:#0c243C; display: block;">Cakes-for-sale</a>
     <a href="about.html" style="text-align: right; color:#0c243C; display: block;">About</a>                
