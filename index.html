@@ -4,43 +4,183 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Special Cakes for All Occasions – Home</title>
+
     <style>
-        .nav-link {
-            text-align: right;
-            color: #0c243C;
-            display: block;
+        /* Accessible focus and skip link */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
         }
+        .skip-link:focus {
+            left: 1rem;
+            top: 1rem;
+            width: auto;
+            height: auto;
+            padding: 0.5rem 1rem;
+            background: #ffffff;
+            border: 2px solid #0C243C;
+            z-index: 1000;
+        }
+
+        /* Color palette (ensured sufficient contrast against white) */
+        :root{
+            --brand-blue: #0C243C; /* dark navy */
+            --brand-red: #B22222;  /* darker red for contrast */
+        }
+
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            margin: 0;
+            line-height: 1.4;
+            color: var(--brand-blue);
+            background: #fff;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .logo {
+            display:inline-block;
+            max-height: 64px;
+        }
+
+        nav[aria-label="Primary"] {
+            margin-left: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            color: var(--brand-blue);
+            text-decoration: none;
+            padding: 0.25rem 0.35rem;
+        }
+
+        .nav-link:focus,
+        .nav-link:hover {
+            outline: 3px solid #D6E9FF;
+            border-radius: 4px;
+        }
+
+        .nav-link[aria-current="page"] {
+            font-weight: 600;
+        }
+
+        main {
+            padding: 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
         .center-red {
             text-align: center;
-            color: #E94D40;
+            color: var(--brand-red);
         }
         .center-blue {
             text-align: center;
-            color: #0C243C;
+            color: var(--brand-blue);
         }
 
         .banner-img {
             display: block;
-            margin: 0 auto;
+            margin: 1rem auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .contact-info a {
+            color: var(--brand-blue);
+            text-decoration: underline;
+        }
+
+        .hours {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* make keyboard focus highly visible for all interactive elements */
+        a:focus, button:focus {
+            outline: 3px solid #FFD966;
+            outline-offset: 2px;
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding: 1rem;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 0.9rem;
         }
     </style>
 </head>
+<body>
+    <!-- Skip link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<a href="index.html"><img src="./Images/logo.png" class="no-border" alt="Special Cakes for All Occasions logo"></a>
-    <a href="index.html" class="nav-link">Home</a> 
-    <a href="Cakes-for-sale.html" class="nav-link">Cakes for sale</a>
-    <a href="About.html" class="nav-link">About</a>
-    <img src="./Images/CakeDisplay1200.png" alt="Cake Banner" class="banner-img">
-    <p class="center-red">Welcome to Special Cakes for All Occasions</p>
-    <p class="center-blue"> Special Cakes for All Occasions is the answer to all your cake needs, serving a wide variety of sweets perfect for an office treat, birthday and other celebrations.</p>
-    <p class="center-red">Come and visit us</p>
-    <p class="center-blue"> 23 Pacific Hwy, Sydney NSW </p> 
-    <p class="center-blue"> Phone: 8965 12345 </p>
-    <p class="center-blue"> Email: specialcakes@email.com </p>
-    <p class="center-blue"> Saturday 8:30am-1pm </p>
-    <p class="center-blue"> 23 Pacific Hwy, Sydney NSW </p> 
-    <p style="text-align: center; color:#0C243C"> Sunday 9am-12pm </p>
+    <header>
+        <a href="index.html" aria-label="Special Cakes for All Occasions homepage">
+            <img src="./Images/logo.png" alt="Special Cakes for All Occasions logo" class="logo">
+        </a>
 
+        <nav aria-label="Primary" role="navigation">
+            <ul>
+                <li><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
+                <li><a href="Cakes-for-sale.html" class="nav-link">Cakes for sale</a></li>
+                <li><a href="About.html" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main id="main-content" tabindex="-1">
+        <h1 class="center-red">Welcome to Special Cakes for All Occasions</h1>
 
+        <figure>
+            <img src="./Images/CakeDisplay1200.png" alt="Display of assorted celebration cakes on shelves" class="banner-img" role="img" aria-describedby="banner-desc">
+            <figcaption id="banner-desc" style="text-align:center; color:var(--brand-blue);">Delicious cakes made for birthdays, office treats and celebrations.</figcaption>
+        </figure>
 
+        <section aria-labelledby="about-heading">
+            <h2 id="about-heading" class="center-blue">About Us</h2>
+            <p class="center-blue">Special Cakes for All Occasions provides a wide variety of sweets perfect for an office treat, birthday and other celebrations. We use fresh ingredients and offer custom decorations.</p>
+        </section>
+
+        <section aria-labelledby="visit-heading">
+            <h2 id="visit-heading" class="center-red">Visit & Contact</h2>
+
+            <address class="contact-info center-blue" aria-label="Contact information">
+                <p><strong>Address:</strong> 23 Pacific Hwy, Sydney NSW</p>
+                <p><strong>Phone:</strong> <a href="tel:+612896512345" aria-label="Call Special Cakes on 02 8965 12345">02 8965 12345</a></p>
+                <p><strong>Email:</strong> <a href="mailto:specialcakes@email.com">specialcakes@email.com</a></p>
+            </address>
+
+            <div style="text-align:center; margin-top:0.5rem;">
+                <h3 style="margin-bottom:0.25rem;">Opening hours</h3>
+                <ul class="hours center-blue" aria-label="Opening hours">
+                    <li><strong>Saturday:</strong> <time datetime="08:30">8:30am</time> – <time datetime="13:00">1:00pm</time></li>
+                    <li><strong>Sunday:</strong> <time datetime="09:00">9:00am</time> – <time datetime="12:00">12:00pm</time></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Special Cakes for All Occasions</p>
+        <p>Last updated: <time datetime="2025-12-10">2025-12-10</time></p>
+    </footer>
+</body>
+</html>
