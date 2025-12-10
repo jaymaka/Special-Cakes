@@ -3,55 +3,182 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Special Cakes for All Occasions – Home</title>
+    <title>Special Cakes for All Occasions – About</title>
+
+    <style>
+       
+        :focus {
+            outline: 3px solid #E94D40; 
+            outline-offset: 2px;
+        }
+        .skip-link {
+            position: absolute;
+            left: -999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        .skip-link:focus {
+            left: 1rem;
+            top: 1rem;
+            width: auto;
+            height: auto;
+            background: white;
+            padding: 0.25rem 0.5rem;
+            z-index: 1000;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            display: block;
+            color: #0c243C;
+            text-decoration: none;
+            text-align: right;
+            padding: 0.15rem 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+      
+        .page-title {
+            text-align: center;
+            color: #E94D40;
+            font-size: 1em;
+            margin: 0.5rem 0;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #0c243C;
+            font-size: 1em;
+            margin: 0.25rem 0 1rem;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            border: 2px solid #0C243C;
+        }
+
+        th, td {
+            border: 1px solid #0C243C;
+            padding: 10px;
+            text-align: left;
+        }
+
+       
+        form[role="form"] input[type="text"],
+        form[role="form"] input[type="email"],
+        form[role="form"] input[type="tel"],
+        form[role="form"] textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0.25rem;
+            margin-top: 0.25rem;
+        }
+
+        .contact-wrap {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .contact-wrap form {
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-<a href="index.html"><img src="./Images/logo.png" class="no-border" alt="Special Cakes for All Occasions logo"></a>
-    <a href="index.html" style="text-align: right; color:#0c243C; display: block;">Home</a> 
-    <a href="Cakes-for-sale.html" style="text-align: right; color:#0c243C; display: block;">Cakes for sale</a>
-    <a href="About.html" style="text-align: right; color:#0c243C; display: block;">About</a>
-   <img src="./Images/CakeDisplay1200.png" alt="Cake Banner" style="display: block; margin: 0 auto;">
-<p style="text-align: center; color: #E94D40 ">About Special Cakes for All Occasions</p>
-<p style="text-align: center; color:#0c243C">Special Cakes for All Occasions started a year ago by the store owner, Sam Rice, who wanted to share their love of baking with the world. Come and taste all the delightful cakes!</p>
-<img src="./Images/Waitress975.png" alt="sam rice cake" style="display: block; margin: 0 auto;">
-<p style="text-align: center; color:#E94D40">Job opportunities!</p>
-<p style="text-align: center; color:#0c243C">Come and work for us!</p>
-<table style="margin: 0 auto; border-collapse: collapse; border: 2px solid #0C243C;">
-    <thead>
-        <tr>
-            <th style="border: 1px solid #0C243C; padding: 10px;">Job Title</th>
-            <th style="border: 1px solid #0C243C; padding: 10px;">Job Description</th>
-            <th style="border: 1px solid #0C243C; padding: 10px;">Salary</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td style="border: 1px solid #0C243C; padding: 10px;">Pastry Chef</td>
-            <td style="border: 1px solid #0C243C; padding: 10px;">Specialises in pastry desserts. Must have four years of experience.</td>
-            <td style="border: 1px solid #0C243C; padding: 10px;">$50,000 p.a</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #0C243C; padding: 10px;">Sales assistant</td>
-            <td style="border: 1px solid #0C243C; padding: 10px;">Serves customers in the shop and operates the cash register.</td>
-            <td style="border: 1px solid #0C243C; padding: 10px;">$25,000 p.a</td>
-        </tr>
-    
-    </tbody>
-</table>
-<div style="text-align: center;">
-    <h2 style="color:#E94D40;">Get in touch with us</h2>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-    <form action="#" style="display: inline-block; text-align: left;">
-        <label for="Name">Name:</label><br>
-        <input type="text" id="Name" name="Name" value="" required><br>
-        <label for="Email">Email:</label><br>
-        <input type="email" id="Email" name="Email" value="" required><br><br>
-        <label for="Phone">Phone:</label><br>
-        <input type="tel" id="Phone" name="Phone" value="" required><br><br>  
-        <label for="Feedback">Feedback:</label><br>
-        <textarea id="Feedback" name="Feedback" rows="4" cols="40"></textarea><br><br>
-        <input type="submit" value="Send">
-    </form>
-    </div>
+    <header role="banner">
+        <a href="index.html"><img src="./Images/logo.png" class="no-border" alt="Special Cakes for All Occasions logo"></a>
+
+        <nav role="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Cakes-for-sale.html">Cakes for sale</a></li>
+                <li><a href="About.html" aria-current="page">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" role="main" aria-labelledby="pageHeading">
+        <img src="./Images/CakeDisplay1200.png" alt="Assorted cakes on display" style="display: block; margin: 0 auto;">
+
+        <h1 id="pageHeading" class="page-title">About Special Cakes for All Occasions</h1>
+        <p class="section-subtitle">Special Cakes for All Occasions started a year ago by the store owner, Sam Rice, who wanted to share their love of baking with the world. Come and taste all the delightful cakes!</p>
+
+        <img src="./Images/Waitress975.png" alt="Photograph of Sam Rice, owner" style="display: block; margin: 0 auto;">
+
+        <h2 class="page-title" style="font-size:1em; margin-top:1rem;">Job opportunities!</h2>
+        <p class="section-subtitle">Come and work for us!</p>
+
+        <table aria-describedby="jobs-desc">
+            <caption id="jobs-desc">Available positions, descriptions and annual salaries</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Job Title</th>
+                    <th scope="col">Job Description</th>
+                    <th scope="col">Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pastry Chef</td>
+                    <td>Specialises in pastry desserts. Must have four years of experience.</td>
+                    <td>$50,000 p.a</td>
+                </tr>
+                <tr>
+                    <td>Sales assistant</td>
+                    <td>Serves customers in the shop and operates the cash register.</td>
+                    <td>$25,000 p.a</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="contact-wrap" style="text-align: center;">
+            <h2 id="contactHeading" style="color:#E94D40;">Get in touch with us</h2>
+
+            <form action="#" role="form" aria-labelledby="contactHeading" style="display: inline-block; text-align: left;">
+                <label for="Name">Name:</label><br>
+                <input type="text" id="Name" name="Name" value="" required aria-required="true"><br>
+
+                <label for="Email">Email:</label><br>
+                <input type="email" id="Email" name="Email" value="" required aria-required="true"><br><br>
+
+                <label for="Phone">Phone:</label><br>
+                <input type="tel" id="Phone" name="Phone" value="" required aria-required="true"><br><br>
+
+                <label for="Feedback">Feedback:</label><br>
+                <textarea id="Feedback" name="Feedback" rows="4" cols="40" aria-describedby="feedback-help"></textarea>
+                <div id="feedback-help" style="display:none">Optional feedback from customers.</div>
+                <br><br>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </main>
+
+    <footer role="contentinfo" style="text-align:center; margin-top:1rem;">
+        <p style="color:#0c243C;">&copy; <span aria-hidden="true">2025</span> Special Cakes for All Occasions</p>
+    </footer>
 </body>
 </html>
